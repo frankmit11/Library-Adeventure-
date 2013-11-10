@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" >
+	<title>Test</title>
+	<style type="text/css">
+	#output { font-style: italic; font-weight: bold; color:white; }
+	#put { font-weight: bold; color:white; }
+	body {
+    background-image: url(images/tour.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+         }
+	</style>
+<script type="text/javascript" src="actionn.js"></script>
+</head>
+<body onload="hide()">
+</body>
+<body>
+<div id='start'>
+<h1>Marist Survey</h1>
+<h4> It is mandatory all participants of our tour fill out out survey!</h4>
+	<p>
+	Enter your name:
+		<input type="text" id="nameBox" size="20" value="" />
+		<br>
+		<br>
+    Select major:
+		<input type="checkbox" name="CS" id="cs"></input><label>Computer Science</label> &nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="MK" id="eng"></input><label>English</label> &nbsp;&nbsp;&nbsp;&nbsp;
+	    <input type="checkbox" name="MA" id="math"></input><label>Math</label>
+		<br>
+		<br>
+    Select favorite click:
+      <input type="checkbox" name="JO" id="jock"></input><label>Jock</label> &nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="NE" id="nerd"></input><label>Nerd</label> &nbsp;&nbsp;&nbsp;&nbsp;
+	    <input type="checkbox" name="PO" id="pop"></input><label>Populars</label>
+		 <br>
+		 <br>
+    Select item:
+		<input type="checkbox" name="PE" id="pen"></input><label>Pencil</label> &nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="PH" id="phone"></input><label>Phone</label> &nbsp;&nbsp;&nbsp;&nbsp;
+	    <input type="checkbox" name="RU" id="rule"></input><label>Ruler</label>
+		</p>
+		<input type="button" value="Submit"	
+	    onclick="start();">
+	    <br>
+	    <br>
+	    <div id="put"></div>
+
+</div>
+</body>
+<body>
+<div id='text'>
+ <div style="text-align:center">
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <font color="yellow">
+ <p>
+ <h2>
+ The Marist tour has left you behind while in the library.<br> 
+ Can you find your group again before getting lost in the library forever?
+    </p>
+    </font>
+    <button onclick="timer();">Yes</button>
+    </div>
+    </h2>
+	</div>
+	<div id='input'>
+	<label for="actionInput"><font color="white">What do you want to do?</font></label>
+	<input id="x" type="text" size="27">
+	<button type="button" size="27" onclick="answer();">Enter</button>
+	<hr>
+	</div>
+	<div id="output"></div>
+	</div>
+</body>
+</html>
