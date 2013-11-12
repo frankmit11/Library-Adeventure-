@@ -41,26 +41,26 @@ function answer()
     } 
  }
 function timer(){
- document.getElementById( 'text' ).style.visibility = 'visible';
- document.getElementById( 'start' ).style.visibility = 'hidden';
- document.getElementById( 'button' ).style.visibility = 'hidden';
+ document.getElementById( 'text' ).style.display = 'block';
+ document.getElementById( 'start' ).style.display = 'none';
+ document.getElementById( 'button' ).style.display = 'none';
  image();
   }
   function show(){
-   document.getElementById( 'button' ).style.visibility = 'visible';
+   document.getElementById( 'button' ).style.display = 'block';
  }
  function create(){
-  document.getElementById( 'input' ).style.visibility = 'visible';
-   document.getElementById( 'text' ).style.visibility = 'hidden';
+  document.getElementById( 'input' ).style.display = 'block';
+   document.getElementById( 'text' ).style.display = 'none';
  
  
  }
   
   
   function hide(){
-  document.getElementById( 'input' ).style.visibility = 'hidden';
-  document.getElementById( 'text' ).style.visibility = 'hidden';
-  document.getElementById( 'button' ).style.visibility = 'hidden'
+  document.getElementById( 'input' ).style.display = 'none';
+  document.getElementById( 'text' ).style.display = 'none';
+  document.getElementById( 'button' ).style.display = 'none'
  }
   function start(){
    name=document.getElementById('nameBox').value
