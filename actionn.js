@@ -41,127 +41,163 @@ function answer()
     } 
  }
 function timer(){
-  y = 10
- while(y > 0){
- y = y - 1;
- if(y <=0){
  document.getElementById( 'text' ).style.visibility = 'visible';
-       } 
-     }
+ document.getElementById( 'start' ).style.visibility = 'hidden';
+ document.getElementById( 'button' ).style.visibility = 'hidden';
+ image();
   }
+  function show(){
+   document.getElementById( 'button' ).style.visibility = 'visible';
+ }
+ function create(){
+  document.getElementById( 'input' ).style.visibility = 'visible';
+   document.getElementById( 'text' ).style.visibility = 'hidden';
+ 
+ 
+ }
+  
+  
   function hide(){
   document.getElementById( 'input' ).style.visibility = 'hidden';
   document.getElementById( 'text' ).style.visibility = 'hidden';
+  document.getElementById( 'button' ).style.visibility = 'hidden'
  }
   function start(){
    name=document.getElementById('nameBox').value
    if(document.getElementById('cs').checked===true && document.getElementById('jock').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a jock, and you now have a pencil!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('jock').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a jock, and you now have a phone!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('jock').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a jock, and you now have a ruler!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('nerd').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a nerd, and you now have a pencil!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('nerd').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a nerd, and you now have a phone!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('nerd').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a nerd, and you now have a ruler!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('pop').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a popular kid, and you now have a pencil!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('pop').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a popular kid, and you now have a phone!';
        errors();
+       show();
        }
     else if(document.getElementById('cs').checked===true && document.getElementById('pop').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is computer science,<br> you are a popular kid, and you now have a ruler!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('jock').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a jock, and you now have a pencil!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('jock').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a jock, and you now have a phone!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('jock').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a jock, and you now have a ruler!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('nerd').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a nerd, and you now have a pencil!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('nerd').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a nerd, and you now have a phone!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('nerd').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a nerd, and you now have a ruler!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('pop').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a popular kid, and you now have a pencil!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('pop').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a popular kid, and you now have a phone!';
        errors();
+       show();
        }
     else if(document.getElementById('eng').checked===true && document.getElementById('pop').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is english,<br> you are a popular kid, and you now have a ruler!';
        errors();
+        show();
        }
     else if(document.getElementById('math').checked===true && document.getElementById('jock').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a jock, and you now have a pencil!';
        errors();
+        show();
        }
     else if(document.getElementById('math').checked===true && document.getElementById('jock').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a jock, and you now have a phone!';
        errors();
+        show();
        }
     else if(document.getElementById('math').checked===true && document.getElementById('jock').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a jock, and you now have a ruler!';
        errors();
+        show();
        }
      else if(document.getElementById('math').checked===true && document.getElementById('nerd').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a nerd, and you now have a pencil!';
        errors();
+        show();
        }
      else if(document.getElementById('math').checked===true && document.getElementById('nerd').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a nerd, and you now have a phone!';
        errors();
+        show();
        }
      else if(document.getElementById('math').checked===true && document.getElementById('nerd').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+', your major is math,<br> you are a nerd, and you now have a ruler!';
        errors();
+        show();
        }
      else if(document.getElementById('math').checked===true && document.getElementById('pop').checked===true && document.getElementById('pen').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a popular kid, and you now have a pencil!';
        errors();
+        show();
        }
      else if(document.getElementById('math').checked===true && document.getElementById('pop').checked===true && document.getElementById('phone').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a popular kid, and you now have a phone!';
        errors();
+        show();
        }
     else if(document.getElementById('math').checked===true && document.getElementById('pop').checked===true && document.getElementById('rule').checked===true ){
        document.getElementById('put').innerHTML= 'Hello '+name+' your major is math,<br> you are a popular kid, and you now have a ruler!';
        errors();
+        show();
        }
    
    
@@ -172,23 +208,35 @@ function timer(){
     
 }
 
+function NoMoreThanOne($in1, $in2, $in3){
+	var int = 0;
+	if(document.getElementById($in1).checked){int++;}
+	if(document.getElementById($in2).checked){int++;}
+	if(document.getElementById($in3).checked){int++;}
+	if(int == 1){
+		return true;
+	}else{
+		return false;
+	}
+
+
+}
 
 function errors(){
- if(document.getElementById('cs').checked===true && document.getElementById('eng').checked===true && document.getElementById('math').checked===true ){
-  alert("Too Many Checked!");
-   document.getElementById('put').innerHTML= '';
+	if(!NoMoreThanOne('cs', 'eng', 'math') || !NoMoreThanOne('jock', 'nerd', 'pop') || !NoMoreThanOne('pen', 'phone', 'rule')){
+		alert("You have checked too many only select one from each column!");
+   		document.getElementById('put').innerHTML= '';
    }
-    else if(document.getElementById('jock').checked===true && document.getElementById('nerd').checked===true && document.getElementById('pop').checked===true) {
-    alert("Too Many Checked!");
-        }
-    
-     else if(document.getElementById('pen').checked===true && document.getElementById('phone').checked===true && document.getElementById('rule').checked===true) {
-    alert("Too Many Checked!");
-        }
-    
-
         
 }
+function image(){
+document.body.style.backgroundImage="url('images/library.jpg')";
+
+
+
+}
+
+ 
 
  
  
