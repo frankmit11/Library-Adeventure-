@@ -50,8 +50,10 @@ function timer(){
    document.getElementById( 'button' ).style.display = 'block';
  }
  function create(){
-  document.getElementById( 'input' ).style.display = 'block';
    document.getElementById( 'text' ).style.display = 'none';
+   document.body.style.backgroundImage="url('images/bathroom.jpg')";
+   document.getElementById( 'direction' ).style.display = 'block'
+
  
  
  }
@@ -61,6 +63,7 @@ function timer(){
   document.getElementById( 'input' ).style.display = 'none';
   document.getElementById( 'text' ).style.display = 'none';
   document.getElementById( 'button' ).style.display = 'none'
+  document.getElementById( 'direction' ).style.display = 'none'
  }
   function start(){
    name=document.getElementById('nameBox').value
@@ -199,13 +202,6 @@ function timer(){
        errors();
         show();
        }
-   
-   
-   
-   
-   
-    
-    
 }
 
 function NoMoreThanOne($in1, $in2, $in3){
