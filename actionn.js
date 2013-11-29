@@ -12,59 +12,66 @@
     		into several smaller ones and using variables
     	- write preconditions and postconditions for your function
 */
-function answer()
-{ 
-  response = document.getElementById('x').value;
-  if(response ==='shout'){
-  document.getElementById('output').innerHTML=
-  'Voice goes down hall and nothing is heard.';
-  }
- else if(response ==='walk'){
-  
-  document.getElementById('output').innerHTML=
-  'You walk to a new place.';
-  }
-  else if(response ==='pick up'){
-  
-  document.getElementById('output').innerHTML=
-  'You pick up something.';
-  }
-   else if(response ==='drop'){
-  
-  document.getElementById('output').innerHTML=
-  'You dropped something.';
-  }
+function riddle(){ 
+ var response1;
+ response1 = document.getElementById('moveBox1').value.toLowerCase();
+ if(response1 ==='clock'){
+ document.body.style.backgroundImage="url('images/elevator.jpg')";
+ document.getElementById( 'direction1' ).style.display = 'none';
+ document.getElementById( 'elevator' ).style.display = 'block';
+                          }
+ else if(response1 ==='a clock'){
+ document.body.style.backgroundImage="url('images/elevator.jpg')";
+ document.getElementById( 'direction1' ).style.display = 'none';
+ document.getElementById( 'elevator' ).style.display = 'block';
+                                 }
   else{
+  document.getElementById('output1').innerHTML=
+  'That is incorrect';
+     } 
+ }
+ function answer(){ 
+  var response;
+  response = document.getElementById('moveBox').value.toLowerCase();
+  if(response ==='left'){
+  document.body.style.backgroundImage="url('images/readingroom.jpg')";
+  document.getElementById( 'direction1' ).style.display = 'block';
+  document.getElementById( 'direction' ).style.display = 'none';
+  document.getElementById( 'monsterIMG' ).src="images/monster.png";
+ }
+ else if(response ==='right'){
+  document.body.style.backgroundImage="url('images/study.jpg')";
+  document.getElementById( 'direction2' ).style.display = 'block';
+  document.getElementById( 'direction' ).style.display = 'none';
+  }
+ else{
   document.getElementById('output').innerHTML=
   'That is not a valid response.';
-  
-    } 
- }
-function timer(){
+     } 
+}
+
+ function timer(){
  document.getElementById( 'text' ).style.display = 'block';
  document.getElementById( 'start' ).style.display = 'none';
  document.getElementById( 'button' ).style.display = 'none';
  image();
-  }
-  function show(){
+}
+ function show(){
    document.getElementById( 'button' ).style.display = 'block';
- }
+}
  function create(){
    document.getElementById( 'text' ).style.display = 'none';
    document.body.style.backgroundImage="url('images/bathroom.jpg')";
    document.getElementById( 'direction' ).style.display = 'block'
-
- 
- 
- }
-  
-  
-  function hide(){
-  document.getElementById( 'input' ).style.display = 'none';
+}
+ function hide(){
+  document.getElementById( 'elevator' ).style.display = 'none';
   document.getElementById( 'text' ).style.display = 'none';
-  document.getElementById( 'button' ).style.display = 'none'
-  document.getElementById( 'direction' ).style.display = 'none'
- }
+  document.getElementById( 'button' ).style.display = 'none';
+  document.getElementById( 'direction' ).style.display = 'none';
+  document.getElementById( 'direction1' ).style.display = 'none';
+  document.getElementById( 'direction2' ).style.display = 'none';
+  }
   function start(){
    name=document.getElementById('nameBox').value
    if(document.getElementById('cs').checked===true && document.getElementById('jock').checked===true && document.getElementById('pen').checked===true ){
@@ -203,8 +210,7 @@ function timer(){
         show();
        }
 }
-
-function NoMoreThanOne($in1, $in2, $in3){
+  function NoMoreThanOne($in1, $in2, $in3){
 	var int = 0;
 	if(document.getElementById($in1).checked){int++;}
 	if(document.getElementById($in2).checked){int++;}
@@ -214,25 +220,31 @@ function NoMoreThanOne($in1, $in2, $in3){
 	}else{
 		return false;
 	}
-
-
 }
-
-function errors(){
+  function errors(){
 	if(!NoMoreThanOne('cs', 'eng', 'math') || !NoMoreThanOne('jock', 'nerd', 'pop') || !NoMoreThanOne('pen', 'phone', 'rule')){
 		alert("You have checked too many only select one from each column!");
    		document.getElementById('put').innerHTML= '';
-   }
-        
+                 }
 }
 function image(){
 document.body.style.backgroundImage="url('images/library.jpg')";
-
-
-
+}
+function elevator(){ 
+var move;
+var response3;
+response3 = document.getElementById('moveBox3').value.toLowerCase();
+if (response3==='up'){
+document.body.style.backgroundImage="url('images/floor2.jpg')";
+ document.getElementById( 'elevator' ).style.display = 'none';
+}
+else if (response3=='down'){ 
+document.body.style.backgroundImage="url('images/floor1.jpg')";
+ document.getElementById( 'elevator' ).style.display = 'none';
+                            }
 }
 
- 
+
 
  
  

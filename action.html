@@ -4,8 +4,11 @@
 	<meta charset="utf-8" >
 	<title>Test</title>
 	<style type="text/css">
-	#output { font-style: italic; font-weight: bold; color:yellow; }
+	#output { font-style: italic; font-weight: bold; color:white; }
+	#output1 { font-style: italic; font-weight: bold; color:yellow; }
 	#put { font-weight: bold; color:white; }
+	#p1{background-color:rgba(192,192,192,0.3); width:300px;}
+    #p2{background-color:rgba(192,192,192,0.3); width:300px;}
 	body {
     background-image: url(images/tour.jpg);
     background-size: cover;
@@ -23,7 +26,7 @@
 <br>
 <br>
 <br>
-<div style="text-align:center"><font color="yellow"><h2> The Marist tour has left you behind while in the library.<br>
+<div style="text-align:center;background-color:black"><font color="yellow"><h2> The Marist tour has left you behind while in the library.<br>
 Can you find your group again before getting lost in the library forever?</font></h2> <button onclick="create();">Yes</button></div></div> 
 <div id='start'>
 <h1>Marist Survey</h1>
@@ -59,24 +62,36 @@ Can you find your group again before getting lost in the library forever?</font>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="button"><button onclick="timer();">Begin Tour</button></div>
 <body>
 <div id="direction">
-<p> <h4> <font color="white"> Where do you want to go? </font></h4> </p>
-<input id="left" type="button" value="Left"	
-onclick=";"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input  id="right" type="button" value="Right"	
-onclick=";">
+ <div id="text1"> <h4> You got lost in the bathroom, do you want to go left or right?</h4></div> 
+<input type="text" id="moveBox" size="20">
+<button type="button" size="27" onclick="answer();">Enter</button>
+<br>
+<div id="output"></div>
 </div>
- <div id='input'>
+<div id="direction1">
+ <img id="monsterIMG">
+ <h4><font color="black"> <p id="p1">A wild book monster has appeared!<br>You must solve his riddle in order to proceed.</h4></p> <br><br><h3><p id="p2"> What has a face two hands and no legs?</p></font></h3>
+<input type="text" id="moveBox1" size="20">
+<button type="button" size="27" onclick="riddle();">Enter</button>
 <br>
+<div id="output1"></div>
+</div>
+<div id="direction2">
+ <div id="text2"> <h4>Welcome to the study room would you like to enter the study room or go left?</h4></div> 
+<input type="text" id="moveBox2" size="20">
+<button type="button" size="27" onclick="answer();">Enter</button>
 <br>
+<div id="output2"></div>
+</div>
+<div id="elevator">
 <br>
+<h3>Elevator</h3>
 <br>
-<br>
-	<label for="actionInput"><font color="white">What do you want to do?</font></label>
-	<input id="x" type="text" size="27">
-	<button type="button" size="27" onclick="answer();">Enter</button>
-	<hr>
-	</div>
-	<div id="output"></div>
-	</div>
-</body>
-</html>
+<h4>Would you like to go up or down?</h4>
+<input type="text" id="moveBox3" size="20">
+<button type="button" size="27" onclick="elevator();">Enter</button>
+</div>
+
+
+
+
