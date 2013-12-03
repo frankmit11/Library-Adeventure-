@@ -6,9 +6,12 @@
 	<style type="text/css">
 	#output { font-style: italic; font-weight: bold; color:white; }
 	#output1 { font-style: italic; font-weight: bold; color:yellow; }
+	#output2 {font-size:18px; background-color:rgba(192,192,192,0.3); width:180px;}
 	#put { font-weight: bold; color:white; }
 	#p1{background-color:rgba(192,192,192,0.3); width:300px;}
-    #p2{background-color:rgba(192,192,192,0.3); width:300px;}
+    #p2{background-color:#ff0000; width:300px;}
+    #p3{background-color:rgba(192,192,192,0.3); width:300px;}
+    #p4{background-color:rgba(192,192,192,0.3); width:300px;}
 	body {
     background-image: url(images/tour.jpg);
     background-size: cover;
@@ -17,7 +20,7 @@
 	</style>
 <script type="text/javascript" src="actionn.js"></script>
 </head>
-<body onload="hide()">
+<body onload="hide(); problem();">
 </body>
 <body>
 <div id='text'>
@@ -30,7 +33,7 @@
 Can you find your group again before getting lost in the library forever?</font></h2> <button onclick="create();">Yes</button></div></div> 
 <div id='start'>
 <h1>Marist Survey</h1>
-<h5> Your choices will impact you later in the tour!</h5>
+<h5> Your choices might impact you later in the tour!</h5>
 	Enter your name:
 		<input type="text" id="nameBox" size="20" value="" />
 		<br>
@@ -70,16 +73,17 @@ Can you find your group again before getting lost in the library forever?</font>
 </div>
 <div id="direction1">
  <img id="monsterIMG">
- <h4><font color="black"> <p id="p1">A wild book monster has appeared!<br>You must solve his riddle in order to proceed.</h4></p> <br><br><h3><p id="p2"> What has a face two hands and no legs?</p></font></h3>
+ <h4><font color="black"> <p id="p1">A wild book monster has appeared!<br>You must solve his riddle in order to proceed.</font></h4></p> <br><br><h3><p id="p2"> <font color="white"> What has a face two hands and no legs?</p></font></h3>
 <input type="text" id="moveBox1" size="20">
 <button type="button" size="27" onclick="riddle();">Enter</button>
 <br>
 <div id="output1"></div>
 </div>
 <div id="direction2">
- <div id="text2"> <h4>Welcome to the study room would you like to enter the study room or go left?</h4></div> 
+ <h4>Welcome to the study room would you like to enter the study room or leave?</h4> 
 <input type="text" id="moveBox2" size="20">
-<button type="button" size="27" onclick="answer();">Enter</button>
+<button type="button" size="27" onclick="study();">Enter</button>
+<br>
 <br>
 <div id="output2"></div>
 </div>
@@ -91,6 +95,56 @@ Can you find your group again before getting lost in the library forever?</font>
 <input type="text" id="moveBox3" size="20">
 <button type="button" size="27" onclick="elevator();">Enter</button>
 </div>
+<div id="mathroom">
+<h4>You have entered the evil math teacher's lair solve his problem to escape!</h4>
+<br>
+<div id="output3"></div>
+<div id="output6"></div>
+<br>
+<input type="text" id="moveBox4" size="20">
+<button type="button" size="27" onclick="math();">Enter</button>
+<br>
+<img id="mathteachIMG">
+</div>
+<div id="exit">
+<h3>You have found the exit!</h3>
+<h4>Note: You need a Marist ID to leave. To get a Marist ID find the math room!</h4>
+<br>
+<h4>Do you want to leave?</h4>
+<input type="text" id="moveBox5" size="20">
+<button type="button" size="27" onclick="leave();">Enter</button>
+<br>
+<div id="output4"></div>
+</div>
+<div id="win">
+<h3> <p id="p3"> You have found your group congratulations!</p></h3>
+<br>
+<h4> <p id="p4">Do you want to play again?</p4></h4>
+<input type="text" id="moveBox6" size="20">
+<button type="button" size="27" onclick="over();">Enter</button>
+<br>
+<div id="output5"></div>
+</div>
+<div id="exit1">
+<h3>You have found the exit!</h3>
+<br>
+<h4>Do you want to leave?</h4>
+<input type="text" id="moveBox7" size="20">
+<button type="button" size="27" onclick="leave1();">Enter</button>
+<br>
+<div id="output7"></div>
+</div>
+<div id="direction3">
+  <h4>Welcome to the study room would you like to enter the study room or leave?</h4>
+<input type="text" id="moveBox8" size="20">
+<button type="button" size="27" onclick="csmajor();">Enter</button>
+<br>
+<br>
+<div id="output8"></div>
+</div>
+
+
+
 
 
 
