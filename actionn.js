@@ -264,7 +264,7 @@ document.body.style.backgroundImage="url('images/floor1.jpg')";
 function math(){
 var response4;
 response4 = document.getElementById('moveBox4').value.toLowerCase();
-if (response4=='8' || response4=='11' || response4=='5'){
+if (response4=='10' || response4=='12' || response4=='8'){
 document.body.style.backgroundImage="url('images/floor1.jpg')";
 document.getElementById( 'exit1' ).style.display = 'block';
 document.getElementById('output7').innerHTML= 'You have a Marist ID!';
@@ -306,8 +306,9 @@ document.getElementById('output4').innerHTML= 'You will remain trapped in the li
                             }
 }
 function problem(){
-var number =Math.floor(Math.random()*3)+1;
-document.getElementById('output3').innerHTML= '2 + ' +number+ ' x 2 + ' +number+ '';
+var mathproblem={firstnumber: 4, secondnumber: 2}
+var randomnumber =Math.floor(Math.random()*3)+1;
+document.getElementById('output3').innerHTML= mathproblem.firstnumber + ' + ' + mathproblem.secondnumber + ' x ' +randomnumber+ ' + ' +mathproblem.secondnumber+ '!';
 }
 function over(){
 var response7 = document.getElementById('moveBox6').value.toLowerCase();
