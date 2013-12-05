@@ -110,9 +110,11 @@ function riddle(){
   document.body.style.backgroundImage="url('images/study.jpg')";
   document.getElementById( 'direction2' ).style.display = 'block';
   document.getElementById( 'direction' ).style.display = 'none';
+  document.getElementById( 'output2' ).innerHTML='';
   if (comp==1){
  document.getElementById( 'direction3' ).style.display = 'block';
  document.getElementById( 'direction2' ).style.display = 'none';
+ document.getElementById( 'output8' ).innerHTML='';
               }
  }
  else{
@@ -471,15 +473,16 @@ window.close();
 function study(){
 var response8 = document.getElementById('moveBox2').value.toLowerCase();
 if (response8=='enter'){
- document.getElementById( 'output2' ).innerHTML='The door is locked';
+ document.getElementById( 'output2' ).innerHTML='The door is locked!';
 } 
  else if (response8=='leave'){
   document.body.style.backgroundImage="url('images/bathroom.jpg')";
   document.getElementById( 'direction' ).style.display = 'block';
   document.getElementById( 'direction2' ).style.display = 'none';
+   document.getElementById('output').innerHTML='';
  }
    else{
-       document.getElementById( 'output2' ).innerHTML='That is not a valid response';
+       document.getElementById( 'output2' ).innerHTML='That is not a valid response!';
    }
 }
 
@@ -497,6 +500,7 @@ else if (response9=='leave'){
   document.getElementById( 'direction' ).style.display = 'block';
   document.getElementById( 'direction2' ).style.display = 'none';
   document.getElementById( 'direction3' ).style.display = 'none';
+   document.getElementById( 'output' ).innerHTML='';
 }
 else{
   document.getElementById( 'output8' ).innerHTML='That is not a valid response';
