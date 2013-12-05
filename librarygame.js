@@ -492,10 +492,11 @@ if (response9=='enter'){
    document.getElementById( 'direction1' ).style.display = 'block';
    document.getElementById( 'monsterIMG' ).src="images/monster.png";
 } 
-else if (response8=='leave'){
+else if (response9=='leave'){
   document.body.style.backgroundImage="url('images/bathroom.jpg')";
   document.getElementById( 'direction' ).style.display = 'block';
   document.getElementById( 'direction2' ).style.display = 'none';
+  document.getElementById( 'direction3' ).style.display = 'none';
 }
 else{
   document.getElementById( 'output8' ).innerHTML='That is not a valid response';
