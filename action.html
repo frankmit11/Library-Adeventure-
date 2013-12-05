@@ -4,12 +4,18 @@
 	<meta charset="utf-8" >
 	<title>Test</title>
 	<style type="text/css">
-	#output { font-style: italic; font-weight: bold; color:white; }
-	#output1 { font-style: italic; font-weight: bold; color:yellow; }
+	#output  {font-size:18px;background-color:#ff0000; width:300px;}
+	#output1 {font-weight: bold; color:yellow;  background-color:rgba(192,192,192,0.3); width:300px;}
 	#output2 {font-size:18px; background-color:rgba(192,192,192,0.3); width:180px;}
+	#output9 {font-size:18px;background-color:#ff0000; width:300px;}
+	#output13 {font-size:18px;background-color:#ff0000; width:300px;}
+	#output10 {font-size:18px;background-color:#ff0000; width:300px;}
 	#put { font-weight: bold; color:white; }
 	#p1{background-color:rgba(192,192,192,0.3); width:300px;}
-    #p2{background-color:#ff0000; width:300px;}
+    #p2{font-size:20px;background-color:#ff0000; width:300px;}
+    #outputDiv{font-size:20px;background-color:#ff0000; width:300px;}
+    #output11{font-size:20px;background-color:#ff0000; width:300px;}
+    #output4{font-size:20px;background-color:#ff0000; width:300px;}
     #p3{background-color:rgba(192,192,192,0.3); width:300px;}
     #p4{background-color:rgba(192,192,192,0.3); width:300px;}
 	body {
@@ -30,7 +36,7 @@
 <br>
 <br>
 <div style="text-align:center;background-color:black"><font color="yellow"><h2> The Marist tour has left you behind while in the library.<br>
-Can you find your group again before getting lost in the library forever?</font></h2> <button onclick="create();">Yes</button></div></div> 
+Can you find your group again before getting lost in the haunted library forever?</font></h2> <button onclick="bathroom();">Yes</button></div></div> 
 <div id='start'>
 <h1>Marist Survey</h1>
 <h5> Your choices might impact you later in the tour!</h5>
@@ -62,7 +68,7 @@ Can you find your group again before getting lost in the library forever?</font>
 	    <div id="put"></div> 
 	</div>
 </body>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="button"><button onclick="timer();">Begin Tour</button></div>
+<div id="button"><button onclick="game();">Begin Tour</button></div>
 <body>
 <div id="direction">
  <div id="text1"> <h4> You got lost in the bathroom, do you want to go left or right?</h4></div> 
@@ -94,12 +100,14 @@ Can you find your group again before getting lost in the library forever?</font>
 <h4>Would you like to go up or down?</h4>
 <input type="text" id="moveBox3" size="20">
 <button type="button" size="27" onclick="elevator();">Enter</button>
+<br>
+<div id="output13"></div>
 </div>
+<div id="button2"><button type="button" size="27" onclick="elevator2();">Answer Phone</button></div>
 <div id="mathroom">
-<h4>You have entered the evil math teacher's lair solve his problem to escape!</h4>
+<h4>You have entered the evil math teacher's lair solve his problem to get a Marist ID and escape!</h4>
 <br>
 <div id="output3"></div>
-<div id="output6"></div>
 <br>
 <input type="text" id="moveBox4" size="20">
 <button type="button" size="27" onclick="math();">Enter</button>
@@ -108,20 +116,19 @@ Can you find your group again before getting lost in the library forever?</font>
 </div>
 <div id="exit">
 <h3>You have found the exit!</h3>
-<h4>Note: You need a Marist ID to leave. To get a Marist ID find the math room!</h4>
 <br>
 <h4>Do you want to leave?</h4>
 <input type="text" id="moveBox5" size="20">
 <button type="button" size="27" onclick="leave();">Enter</button>
 <br>
 <div id="output4"></div>
+<br>
+<img id="badmonster">
 </div>
 <div id="win">
 <h3> <p id="p3"> You have found your group congratulations!</p></h3>
 <br>
-<h4> <p id="p4">Do you want to play again?</p4></h4>
-<input type="text" id="moveBox6" size="20">
-<button type="button" size="27" onclick="over();">Enter</button>
+<button type="button" size="27" onclick="over();">The End</button>
 <br>
 <div id="output5"></div>
 </div>
@@ -133,6 +140,10 @@ Can you find your group again before getting lost in the library forever?</font>
 <button type="button" size="27" onclick="leave1();">Enter</button>
 <br>
 <div id="output7"></div>
+<br>
+<br>
+<div id="outputDiv"></div>
+<img id="evilmonster">
 </div>
 <div id="direction3">
   <h4>Welcome to the study room would you like to enter the study room or leave?</h4>
@@ -142,8 +153,38 @@ Can you find your group again before getting lost in the library forever?</font>
 <br>
 <div id="output8"></div>
 </div>
-
-
+<div id="direction4">
+ <img id="monsterIMG1">
+<div id="monstertext"> <h4><font color="black"> <p id="p1">A wild book monster has appeared!<br> His riddle's are useless against english majors!</font></h4></p> <br><br><h3></div><p id="p2"> <font color="white"> Do you want to proceed?</p></font></h3>
+<input type="text" id="moveBox9" size="20">
+<button type="button" size="27" onclick="riddle1();">Enter</button>
+<br>
+<div id="output9"></div>
+</div>
+<div id="mathroom1">
+<h4>You have found a math teacher!</h4>
+<br>
+<h4> Your math teacher knows you are a math major and gives you a Marist ID that will help you escape!</h4>
+<br>
+<h4> Do you want to continue?</h4>
+<br>
+<div id="output10"></div>
+<input type="text" id="moveBox10" size="20">
+<button type="button" size="27" onclick="mathmajor();">Enter</button>
+<br>
+<img id="mathteachIMG1">
+</div>
+<div id="exit2">
+<h3>You have found the exit!</h3>
+<br>
+<h4>Do you want to leave?</h4>
+<input type="text" id="moveBox11" size="20">
+<button type="button" size="27" onclick="jocks();">Enter</button>
+<br>
+<div id="output11"></div>
+<br>
+<img id="scarymonster">
+</div>
 
 
 
