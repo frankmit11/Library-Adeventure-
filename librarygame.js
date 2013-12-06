@@ -138,9 +138,11 @@ function riddle(){
    document.getElementById( 'text' ).style.display = 'none';
    document.body.style.backgroundImage="url('images/bathroom.jpg')";
    document.getElementById( 'direction' ).style.display = 'block'
+    document.getElementById( 'helpbutton' ).style.display = 'block';
 }
  
  function hide(){
+  document.getElementById( 'helpbutton' ).style.display = 'none';
   document.getElementById( 'exit2' ).style.display = 'none';
   document.getElementById( 'button2' ).style.display = 'none';
   document.getElementById( 'mathroom1' ).style.display = 'none';
@@ -549,6 +551,9 @@ else{
   document.getElementById('output11').innerHTML= 'That is an invalid response!';
     }
 }
+function help(){ 
+alert("Your goal is to find your group again before getting trapped in the library forever. Find the math room and things will become clear.")  
+ }
 
 
 
