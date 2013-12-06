@@ -413,7 +413,21 @@ document.body.style.backgroundImage="url('images/floor1.jpg')";
 function math(){
 var response4;
 response4 = document.getElementById('moveBox4').value.toLowerCase();
-if (response4=='10' || response4=='12' || response4=='8'){
+if (response4=='8' && randomnumber=='1' ){
+document.body.style.backgroundImage="url('images/floor1.jpg')";
+document.getElementById( 'exit1' ).style.display = 'block';
+document.getElementById('output7').innerHTML= 'You have a Marist ID!';
+document.getElementById( 'mathroom' ).style.display = 'none';
+m = 1;
+}
+else if (response4=='10' && randomnumber=='2' ){
+document.body.style.backgroundImage="url('images/floor1.jpg')";
+document.getElementById( 'exit1' ).style.display = 'block';
+document.getElementById('output7').innerHTML= 'You have a Marist ID!';
+document.getElementById( 'mathroom' ).style.display = 'none';
+m = 1;
+}
+else if (response4=='12' && randomnumber=='3' ){
 document.body.style.backgroundImage="url('images/floor1.jpg')";
 document.getElementById( 'exit1' ).style.display = 'block';
 document.getElementById('output7').innerHTML= 'You have a Marist ID!';
@@ -455,6 +469,7 @@ if (response6=='yes' && m==1){
 document.body.style.backgroundImage="url('images/tour.jpeg')";
  document.getElementById( 'exit1' ).style.display = 'none';
   document.getElementById( 'win' ).style.display = 'block';
+  document.getElementById( 'helpbutton' ).style.display = 'none';
 }
 else if (response6=='no'){ 
 document.getElementById('outputDiv').innerHTML= 'Then you will be eaten!';
@@ -467,7 +482,7 @@ document.getElementById('outputDiv').innerHTML= 'That is an invalid response!';
 
 function problem(){
 var mathproblem={firstnumber: 4, secondnumber: 2}
-var randomnumber =Math.floor(Math.random()*3)+1;
+ randomnumber =Math.floor(Math.random()*3)+1;
 document.getElementById('output3').innerHTML= mathproblem.firstnumber + ' + ' + mathproblem.secondnumber + ' x ' +randomnumber+ ' + ' +mathproblem.secondnumber+ '!';
 }
 
