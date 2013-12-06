@@ -423,7 +423,6 @@ else {
  document.getElementById( 'mathroom' ).style.display = 'none';
  document.body.style.backgroundImage="url('images/bathroom.jpg')";
   document.getElementById( 'direction' ).style.display = 'block';
-  document.getElementById('output').innerHTML= '';
       }
 }
 
@@ -433,8 +432,6 @@ response5 = document.getElementById('moveBox5').value.toLowerCase();
  if (response5=='yes'){
  alert("You need to find a Marist ID in order to leave");
   document.getElementById( 'elevator' ).style.display = 'block';
-  document.getElementById('output13').innerHTML= '';
-  document.getElementById('output4').innerHTML= '';
   document.getElementById( 'exit' ).style.display = 'none';
   document.body.style.backgroundImage="url('images/elevator.jpg')";
 }
