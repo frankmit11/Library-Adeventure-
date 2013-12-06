@@ -423,6 +423,7 @@ else {
  document.getElementById( 'mathroom' ).style.display = 'none';
  document.body.style.backgroundImage="url('images/bathroom.jpg')";
   document.getElementById( 'direction' ).style.display = 'block';
+  document.getElementById('output').innerHTML= '';
       }
 }
 
