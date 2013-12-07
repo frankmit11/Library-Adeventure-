@@ -438,8 +438,11 @@ else {
  alert("That is wrong you will now be sent to the bathroom!");
  document.getElementById( 'mathroom' ).style.display = 'none';
  document.body.style.backgroundImage="url('images/bathroom.jpg')";
-  document.getElementById( 'direction' ).style.display = 'block';
-  document.getElementById('output').innerHTML= '';
+ document.getElementById( 'direction' ).style.display = 'block';
+ document.getElementById('output').innerHTML= '';
+ document.getElementById('output2').innerHTML= '';
+ document.getElementById('output9').innerHTML= '';
+  document.getElementById('output1').innerHTML= '';
       }
 }
 
